@@ -1,0 +1,26 @@
+{
+  "name": "usersList",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "livereload": "gulp server",
+    "build": "gulb build"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "gulp": "~3.9.0",
+    "gulp-browserify": "~0.5.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "~2.2.0",
+    "gulp-csso": "~0.2.9",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-jade": "~0.10.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-myth": "^1.1.0",
+    "gulp-stylus": "^2.1.0",
+    "gulp-uglify": "~1.0.2",
+    "jshint": "^2.9.1"
+  }
+}

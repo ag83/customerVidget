@@ -1,0 +1,23 @@
+table.table-bordered(width='80%')
+    tr
+        th ID
+        th Name
+        th Phones
+        th Addresses
+    tr(ng-repeat="cust in CC.customers")
+        td {{cust.customer_id}}
+        td
+            span {{cust.last_name ? cust.last_name + ' ' : ''}}
+            span {{cust.first_name ? cust.first_name : ''}}
+        td(ng-repeat="phone in cust.phones")
+            div {{phone.number}}
+        td(ng-repeat="addr in cust.addresses")
+            div {{addr.label}}
+div.row
+    div.col-sm-6.col-md-6.col-lg-6
+        span Display
+        select.selectpicker.btn(ng-model="CC.showLimit", ng-options="item for item in [5, 10, 25]", data-width="fit" )
+
+        span items
+    div.col-sm-6.col-md-6.col-lg-6
+        uib-pagination(total-items="CC.pages", items-per-page=1, max-size=1, ng-model="CC.currentPage", ng-change="CC.changePage()", previous-text="<<", next-text=">>")
